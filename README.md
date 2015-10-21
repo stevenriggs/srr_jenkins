@@ -1,4 +1,4 @@
-tjcts_jenkins Cookbook
+srr_jenkins Cookbook
 ======================
 This cookbook installs the latest version of jenkins
 
@@ -7,9 +7,9 @@ Requirements
 CentOS 6.x
 
 #### packages
-- 'tjcts_iptables' - tjcts_jenkins needs tjcts_iptables to redirect port 80 and 443.
-- 'tjcts_jdk' - tjcts_jenkins needs tjcts_jdk to install and configure java
-- 'tjcts_deploy' - tjcts_jenkins needs tjcts_deploy to give access to the standard deploy account
+- 'srr_iptables' - srr_jenkins needs srr_iptables to redirect port 80 and 443.
+- 'srr_jdk' - srr_jenkins needs srr_jdk to install and configure java
+- 'srr_deploy' - srr_jenkins needs srr_deploy to give access to the standard deploy account
 
 
 Attributes
@@ -17,76 +17,76 @@ Attributes
 TODO: List your cookbook attributes here.
 
 e.g.
-#### tjcts_jenkins::default
+#### srr_jenkins::default
 <table>
   <tr>
-    <th>['tjcts_jenkins']['version']</th>
+    <th>['srr_jenkins']['version']</th>
     <th>String</th>
     <th>THIS DOES NOT WORK AT THIS TIME. Version of Jenkins to install.</th>
     <th>"1.599-1.1"</th>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['use_ssl']</tt></td>
+    <td><tt>['srr_jenkins']['use_ssl']</tt></td>
     <td>String</td>
     <td>whether to setup SSL</td>
     <td><tt>"true"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['country']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['country']</tt></td>
     <td>String</td>
     <td>The country for the SSL certificate</td>
     <td><tt>"US"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['state']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['state']</tt></td>
     <td>String</td>
     <td>The state for the SSL certificate</td>
     <td><tt>"Kentucky"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['locality']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['locality']</tt></td>
     <td>String</td>
     <td>The city or town for the SSL certificate</td>
     <td><tt>"Lexington"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['organization']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['organization']</tt></td>
     <td>String</td>
     <td>The organization for the SSL certificate</td>
     <td><tt>"The Jockey Club"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['unit']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['unit']</tt></td>
     <td>String</td>
     <td>The business unit for the SSL certificate</td>
     <td><tt>"The Jockey Club Technology Services"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['email']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['email']</tt></td>
     <td>String</td>
     <td>The email for the SSL certificate</td>
     <td><tt>""</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['keypassword']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['keypassword']</tt></td>
     <td>String</td>
     <td>The password for the key SSL certificate</td>
     <td><tt>"jenkins"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['storepassword']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['storepassword']</tt></td>
     <td>String</td>
     <td>The password for the key store p12 file and jks file</td>
     <td><tt>"jenkins"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_jenkins']['ssl']['sslfilepath']</tt></td>
+    <td><tt>['srr_jenkins']['ssl']['sslfilepath']</tt></td>
     <td>String</td>
     <td>The path for the SSL certificate files</td>
     <td><tt>"/var/lib/jenkins/ssl"</tt></td>
   </tr>
   <tr>
-    <td><tt>['tjcts_iptables']['rules']</tt></td>
+    <td><tt>['srr_iptables']['rules']</tt></td>
     <td>String</td>
     <td>The rules for iptables. Includes redirects for ports 80 and 443</td>
     <td><tt>"*filter
@@ -150,21 +150,21 @@ COMMIT
 
 Usage
 -----
-#### tjcts_jenkins::default
+#### srr_jenkins::default
 
 ## Use a wrapper cookbook ##
-In your metadata.rb: add the line 'depends tjcts_jenkins'
-In your recipes/default.rb: add the line 'include_recipe tjcts_jenkins'
+In your metadata.rb: add the line 'depends srr_jenkins'
+In your recipes/default.rb: add the line 'include_recipe srr_jenkins'
 In your attributes/default.rb: Override any attributes you like.
 
 
-Or just include `tjcts_jenkins` in your node's `run_list`:
+Or just include `srr_jenkins` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[tjcts_jenkins]"
+    "recipe[srr_jenkins]"
   ]
 }
 ```
@@ -172,4 +172,4 @@ Or just include `tjcts_jenkins` in your node's `run_list`:
 
 License and Authors
 -------------------
-Authors: Steve Riggs
+Authors: Steven Riggs
