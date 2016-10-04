@@ -53,13 +53,13 @@ e.g.
     <td><tt>['srr_jenkins']['ssl']['organization']</tt></td>
     <td>String</td>
     <td>The organization for the SSL certificate</td>
-    <td><tt>"The Jockey Club"</tt></td>
+    <td><tt>"My Organization"</tt></td>
   </tr>
   <tr>
     <td><tt>['srr_jenkins']['ssl']['unit']</tt></td>
     <td>String</td>
     <td>The business unit for the SSL certificate</td>
-    <td><tt>"The Jockey Club Technology Services"</tt></td>
+    <td><tt>"My Business Unit"</tt></td>
   </tr>
   <tr>
     <td><tt>['srr_jenkins']['ssl']['email']</tt></td>
